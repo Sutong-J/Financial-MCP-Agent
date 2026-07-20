@@ -1,0 +1,42 @@
+# Secrets & local env
+.env
+.env.*
+!.env.example
+web/.env.local
+
+# Runtime data
+data/
+logs/
+reports/
+*.db
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Node / Next.js
+web/node_modules/
+web/.next/
+web/out/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Chroma / local vector stores
+**/chroma*/
+**/.chroma/

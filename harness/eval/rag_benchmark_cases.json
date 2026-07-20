@@ -1,0 +1,70 @@
+[
+  {
+    "id": "session_roe_why",
+    "scope": "session",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-maotai-001",
+    "query": "ROE 为什么高？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:fundamental_analysis:_root_:0"
+    ],
+    "notes": "当前会话 · 应召回茅台基本面 ROE 段落"
+  },
+  {
+    "id": "session_technical_support",
+    "scope": "session",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-maotai-001",
+    "query": "技术面支撑在哪里？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:technical_analysis:_root_:0"
+    ],
+    "notes": "当前会话 · 应召回茅台技术面段落"
+  },
+  {
+    "id": "session_valuation_level",
+    "scope": "session",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-maotai-001",
+    "query": "现在估值贵不贵？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:value_analysis:_root_:0"
+    ],
+    "notes": "当前会话 · 应召回茅台估值段落"
+  },
+  {
+    "id": "session_main_risk",
+    "scope": "session",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-maotai-001",
+    "query": "主要风险是什么？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:final_report:_root_:0",
+      "eval-maotai-001:news_analysis:_root_:0"
+    ],
+    "notes": "当前会话 · 综合报告或新闻均可；expected 可填多个 acceptable ids"
+  },
+  {
+    "id": "cross_session_maotai_recall",
+    "scope": "cross_session",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-wuliangye-001",
+    "query": "上次分析贵州茅台的结论是什么？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:final_report:_root_:0"
+    ],
+    "notes": "跨会话 · 当前在五粮液 session，应召回茅台历史综合结论"
+  },
+  {
+    "id": "compare_valuation",
+    "scope": "compare",
+    "user_id": "eval-user-rag",
+    "session_id": "eval-maotai-001",
+    "query": "和五粮液比哪个估值更合理？",
+    "expected_chunk_ids": [
+      "eval-maotai-001:value_analysis:_root_:0",
+      "eval-wuliangye-001:value_analysis:_root_:0"
+    ],
+    "notes": "对比检索 · 应同时召回茅台与五粮液的估值段落"
+  }
+]
